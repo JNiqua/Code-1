@@ -10,19 +10,16 @@ die JavaScript-Code außerhalb eines Webbrowsers ausführen kann.
 
 
 
-**ESLint**
-
+### ESLint
 ESLint ist ein Werkzeug zur statischen Quellcode-Analyse. 
 Es identifiziert problematische Stellen und Muster in JavaScript-Codezeilen.
 
 
 
-**GitGraph**
-
+### GitGraph
 Erstelle Diagramme und Darstellungen mit Text und Code.
 
 
 
-**CVS**
-
+### CVS
 Concurrent Versioning System
