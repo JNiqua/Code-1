@@ -6,7 +6,7 @@ Alle Versionen werden in einem Archiv mit Zeitstempel und Benutzerkennung gesich
 
 **Node.js**
 
-Node.js ist eine plattformübergreifende Open-Source-JavaScript-Laufzeitumgebung, 
+  Node.js ist eine plattformübergreifende Open-Source-JavaScript-Laufzeitumgebung, 
 die JavaScript-Code außerhalb eines Webbrowsers ausführen kann.
 
 
