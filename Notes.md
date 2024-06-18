@@ -35,4 +35,4 @@ HTML uses "markup" to annotate text, images, and other content for display in a 
 The syntax is the grammar of the HTML code.
 
 ### Semantik
-**Semantics describes the meaning of the elements of the code.**
+Semantics describes the meaning of the elements of the code.
