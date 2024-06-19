@@ -1,0 +1,24 @@
+body {
+    font-size: 20pt;
+    text-align: center;
+    background-color: bisque;
+
+    h1 {
+        color: blue;
+    }
+
+    p.baum {
+        color: rgb(47, 186, 139);
+    }
+
+    div {
+        display: block;
+        color: yellowgreen;
+        background-color: tomato;
+        width: 300px;
+        position: absolute;
+        top: 100px;
+        left: 500px;
+    }
+}
+
