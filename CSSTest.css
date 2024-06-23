@@ -1,0 +1,107 @@
+body {
+    font-size: 20pt;
+    text-align: center;
+    background-color: bisque;
+
+    h1 {
+        color: blue;
+    }
+
+    p.baum {
+        color: rgb(47, 186, 139);
+    }
+
+    div {
+        display: block;
+        color: yellowgreen;
+        background-color: tomato;
+        width: 60px;
+        height: 33px;
+        position: absolute;
+    }
+
+    div.column_1 {
+        left: 10%;
+    }
+
+    div.column_2 {
+        left: 20%;
+    }
+
+    div.column_3 {
+        left: 30%;
+    }
+
+    div.column_4 {
+        left: 40%;
+    }
+
+    div.column_5 {
+        left: 50%;
+    }
+
+    div.column_6 {
+        left: 60%;
+    }
+
+    div.column_7 {
+        left: 70%;
+    }
+
+    div.column_8 {
+        left: 80%;
+    }
+
+    div.column_9 {
+        left: 90%;
+    }
+
+    div#row_1 {
+        top: 20%;
+    }
+
+    div#row_2 {
+        top: 25%;
+    }
+
+    div#row_3 {
+        top: 30%;
+    }
+
+    div#row_4 {
+        top: 35%;
+    }
+
+    div#row_5 {
+        top: 40%;
+    }
+
+    div#row_6 {
+        top: 45%;
+    }
+
+    div#row_7 {
+        top: 50%;
+    }
+
+    div#row_8 {
+        top: 55%;
+    }
+
+    div#row_9 {
+        top: 60%;
+    }
+
+    div#row_10 {
+        top: 65%;
+    }
+
+    div#row_11 {
+        top: 70%;
+    }
+
+    div#row_12 {
+        top: 75%;
+    }
+}
+
