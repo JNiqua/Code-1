@@ -18,8 +18,9 @@ It statically analyzes your code to quickly find problems.
 Create diagrams and visualizations using text and code.
 
 
-### CVS
-Concurrent Versioning System
+### CVS (Concurrent Versioning System)
+Another Version Control System
+
 
 
 ## HTML (Hypertext Markup Language)

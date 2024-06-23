@@ -16,5 +16,3 @@ Attributes are always specified in the start tag. Attributes usually come in nam
     * <html lang="en">
 * "title": Defines some extra information about an element. The value of the title attribute will be displayed as a tooltip when you mouse over the element.
     *  <p title="I'm a tooltip">This is a paragraph.</p> 
-
-### General Structure
