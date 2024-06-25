@@ -1,0 +1,17 @@
+body {
+    background-color: beige;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+
+
+    div#end {
+        font-size: 18pt;
+    }
+
+    div#reload {
+        position: absolute;
+        font-size: 15pt;
+        
+    }
+}
