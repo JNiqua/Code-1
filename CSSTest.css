@@ -26,6 +26,8 @@ body {
 
     div.column_2 {
         left: 20%;
+        color: blueviolet;
+        background-color: yellow;
     }
 
     div.column_3 {
@@ -78,6 +80,8 @@ body {
 
     div#row_6 {
         top: 45%;
+        color: aqua;
+        background-color: violet;
     }
 
     div#row_7 {
