@@ -55,9 +55,9 @@ Selector | Example | Description
 ### Input
 Selector | Example | Description
 --|--|--
-:focus      |	input:focus     |	Selects the input element which has focus
-:valid      |	input:valid     |	Selects all input elements with a valid value
-:invalid    |	input:invalid   |	Selects all input elements with an invalid value
+:focus      |	input:focus     |	Selects the ```<input>``` element which has focus
+:valid      |	input:valid     |	Selects all ```<input>``` elements with a valid value
+:invalid    |	input:invalid   |	Selects all ```<input>``` elements with an invalid value
 :enabled    |	input:enabled   |	Selects every enabled ```<input>``` element
 
 ### Links
