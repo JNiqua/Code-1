@@ -2,7 +2,7 @@
 
 ## Standard Attributes
 All HTML elements can have attributes. Attributes provide additional information about elements. 
-Attributes are always specified in the start tag. Attributes usually come in name/value pairs like: name="value"
+Attributes are always specified in the start tag. Attributes usually come in name/value pairs like: name="value".
 
 
 * "href": The ```<a>``` tag defines a hyperlink. The href attribute specifies the URL of the page the link goes to.
@@ -40,7 +40,7 @@ Tag                 |   Description
 ```<meta>``` 	    |   Defines metadata about an HTML document
 
 
-### Body (Layout/Text)
+### Layout, Text and Images
 Tag                         |   Description
 ----------------------------|----------------------------
 ```<a>``` 	                |   Defines a hyperlink
@@ -62,5 +62,23 @@ Tag                         |   Description
 ```<sub>``` 	            |   Defines subscripted text
 ```<s>``` 	                |   Defines text that is no longer correct
 ```<center>``` 	            |   Defines centered text (Not supported in HTML5. Use CSS instead.)
+
+
+### Form and Input
+Tag                 |   Description
+--------------------|--------------------
+```<form>``` 	    |Defines an HTML form for user input
+```<input>``` 	    |Defines an input control
+```<textarea>``` 	|Defines a multiline input control (text area)
+```<button>``` 	    |Defines a clickable button
+```<select>``` 	    |Defines a drop-down list
+```<optgroup>``` 	|Defines a group of related options in a drop-down list
+```<option>``` 	    |Defines an option in a drop-down list
+```<label>``` 	    |Defines a label for an ```<input>``` element
+```<fieldset>``` 	|Groups related elements in a form
+```<legend>``` 	    |Defines a caption for a ```<fieldset>``` element
+```<datalist>``` 	|Specifies a list of pre-defined options for input controls
+```<output>``` 	    |Defines the result of a calculation
+
 
 
