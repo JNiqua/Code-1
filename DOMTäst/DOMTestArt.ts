@@ -17,8 +17,8 @@ let YEETColor = [
 ]
 
 
-let spanElement: HTMLTitleElement = document.querySelector("title#yeetTitle")!;
-spanElement.textContent = YEETText[Math.floor(Math.random()*5)];
+let titleElement: HTMLTitleElement = document.querySelector("title#yeetTitle")!;
+titleElement.textContent = YEETText[Math.floor(Math.random()*5)];
 
 function hndClick(_event: Event): void {
     let target: HTMLElement = <HTMLElement>_event.target;
