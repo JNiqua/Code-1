@@ -1,36 +1,52 @@
 "use strict";
-let Star1 = {
-    color: "#dfd5b6",
-    radius: 15,
-    Halo: true,
-    HaloColor: "black",
-    HaloInnerRadius: 20,
-    HaloOuterRadius: 30,
-};
-let Star2 = {
-    color: "white",
-    radius: 3,
-    Halo: false,
-    HaloColor: "none",
-    HaloInnerRadius: 0,
-    HaloOuterRadius: 0,
-};
-let Star3 = {
-    color: "brown",
-    radius: 10,
-    Halo: true,
-    HaloColor: "black",
-    HaloInnerRadius: 13,
-    HaloOuterRadius: 23,
-};
-let Star4 = {
-    color: "indianred",
-    radius: 14,
-    Halo: true,
-    HaloColor: "black",
-    HaloInnerRadius: 18,
-    HaloOuterRadius: 28,
-};
+let canvas = document.querySelector("canvas");
+let crc2 = canvas.getContext("2d");
+let Planets = [];
+let numPlanets = 20;
+generatePlanets();
+drawPlanets();
+function generatePlanets() {
+    for (let i = 0; i < numPlanets; i++) {
+        let TheRadius = Math.random() * 15 + 3;
+        let planet = {
+            Color: "white",
+            PositionX: Math.random() * canvas.width,
+            PositionY: Math.random() * canvas.height,
+            Radius: TheRadius,
+            HaloColor: "black",
+            HaloInnerRadius: TheRadius + Math.random() * 3 + 3,
+            HaloOuterRadius: TheRadius + Math.random() * 6 + 6,
+        };
+        Planets.push(planet);
+    }
+}
+function drawPlanets(planet) {
+    for (let i = 0; i < numPlanets; i++) {
+        /*
+        let rdmPosX: number = Math.random()*canvas.width;
+        let rdmPosY: number = Math.random()*canvas.height;
+        let rdmRadius: number = Math.random();
+        */
+        let HaloGradient = crc2.createRadialGradient(planet.PositionX, planet.PositionY, planet.HaloInnerRadius * 0.5, planet.PositionX, planet.PositionY, planet.HaloOuterRadius * 2);
+        HaloGradient.addColorStop(0, planet.Color);
+        HaloGradient.addColorStop(1, planet.HaloColor);
+        crc2.beginPath();
+        crc2.ellipse(planet.PositionX, planet.PositionY, planet.HaloOuterRadius, planet.HaloOuterRadius, 0, 0, 10);
+        crc2.fillStyle = HaloGradient;
+        crc2.fill();
+        crc2.closePath();
+        crc2.beginPath();
+        crc2.ellipse(planet.PositionX, planet.PositionY, planet.HaloInnerRadius, planet.HaloInnerRadius, 0, 0, 10);
+        crc2.fillStyle = planet.HaloColor;
+        crc2.fill();
+        crc2.closePath();
+        crc2.beginPath();
+        crc2.ellipse(planet.PositionX, planet.PositionY, planet.Radius, planet.Radius, 0, 0, 6);
+        crc2.fillStyle = planet.Color;
+        crc2.fill();
+        crc2.closePath();
+    }
+}
 let MW1 = {
     posX: 0,
     posY: 200,
@@ -107,8 +123,6 @@ let MWposY: number[] = [MW1.posY, MW2.posY, MW3.posY, MW4.posY, MW5.posY, MW6.po
 let MWradiusX: number[] = [MW1.radiusX, MW2.radiusX, MW3.radiusX, MW4.radiusX, MW5.radiusX, MW6.radiusX, MW7.radiusX, MW8.radiusX, MW9.radiusX, MW10.radiusX];
 let MWradiusY: number[] = [MW1.radiusY, MW2.radiusY, MW3.radiusY, MW4.radiusY, MW5.radiusY, MW6.radiusY, MW7.radiusY, MW8.radiusY, MW9.radiusY, MW10.radiusY];
 */
-let canvas = document.querySelector("canvas");
-let crc2 = canvas.getContext("2d");
 crc2.fillStyle = "black";
 crc2.fillRect(0, 0, crc2.canvas.width, crc2.canvas.height);
 for (let h = 0; h < 40; h++) {
@@ -122,11 +136,9 @@ for (let h = 0; h < 40; h++) {
     let rdmPosY = (Math.random() + 1) * MW1.posY * 0.1 * h;
     let rdmRadX = (Math.random() + 1) * MW1.radiusX;
     let rdmRadY = (Math.random() + 1) * MW1.radiusY;
-    /*
-    let MilkyWayGradient: CanvasGradient = crc2.createRadialGradient(rdmPosX, rdmPosY, rdmRadX, rdmPosX, rdmPosY, rdmRadY);
+    let MilkyWayGradient = crc2.createRadialGradient(rdmPosX, rdmPosY, rdmRadX, rdmPosX, rdmPosY, rdmRadY);
     MilkyWayGradient.addColorStop(0, "white");
     MilkyWayGradient.addColorStop(1, "black");
-    */
     crc2.beginPath();
     crc2.ellipse(rdmPosX, rdmPosY, rdmRadX, rdmRadY, 0, 0, 6);
     crc2.fillStyle = "#1e1e1e";
@@ -136,56 +148,10 @@ for (let h = 0; h < 40; h++) {
 for (let j = 0; j < 100; j++) {
     let rdmPosX = Math.random() * canvas.width;
     let rdmPosY = Math.random() * canvas.height;
-    let rdmRadius = Math.random() * Star2.radius;
+    let rdmRadius = Math.random() * 3;
     crc2.beginPath();
     crc2.ellipse(rdmPosX, rdmPosY, rdmRadius, rdmRadius, 0, 0, 6);
     crc2.closePath();
-    crc2.fillStyle = Star2.color;
-    crc2.fill();
-}
-for (let i = 0; i < 20; i++) {
-    let rdmPosX = Math.random() * canvas.width;
-    let rdmPosY = Math.random() * canvas.height;
-    let rdmRadius = Math.random();
-    let HaloGradient = crc2.createRadialGradient(rdmPosX, rdmPosY, Star(i).radius * 0.5, rdmPosX, rdmPosY, Star1.HaloOuterRadius * 2);
-    HaloGradient.addColorStop(0, Star1.color);
-    HaloGradient.addColorStop(1, Star1.HaloColor);
-    crc2.beginPath();
-    crc2.ellipse(rdmPosX, rdmPosY, Star1.HaloOuterRadius * rdmRadius, Star1.HaloOuterRadius * rdmRadius, 0, 0, 10);
-    crc2.fillStyle = HaloGradient;
-    crc2.fill();
-    crc2.closePath();
-    crc2.beginPath();
-    crc2.ellipse(rdmPosX, rdmPosY, Star1.HaloInnerRadius * rdmRadius, Star1.HaloInnerRadius * rdmRadius, 0, 0, 10);
-    crc2.fillStyle = Star1.HaloColor;
-    crc2.fill();
-    crc2.closePath();
-    crc2.beginPath();
-    crc2.ellipse(rdmPosX, rdmPosY, Star1.radius * rdmRadius, Star1.radius * rdmRadius, 0, 0, 6);
-    crc2.fillStyle = Star1.color;
-    crc2.fill();
-    crc2.closePath();
-}
-/*
-
-crc2.beginPath();
-    crc2.ellipse(600, 300, 10, 10, 0, 0, 6);
-    crc2.closePath();
     crc2.fillStyle = "white";
     crc2.fill();
-
-for(let d: number = 0; d < 20; d++) {
-    let rdmPosX: number = Math.random()*canvas.width;
-    let rdmPosY: number = Math.random()*canvas.height;
-    let rdmRadius: number = Math.random()*Star2.radius;
-
-    crc2.beginPath();
-    crc2.ellipse(600, 300, 10, 10, 0, 0, 6);
-    crc2.closePath();
-    crc2.fillStyle = "white";
-    crc2.fill();
-    //crc2.translate(50, 50);
-    //crc2.resetTransform();
-    crc2.rotate(5 * Math.PI / 180);
 }
-*/ 
