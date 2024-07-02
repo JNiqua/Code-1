@@ -95,7 +95,7 @@ let canvas = document.querySelector("canvas");
 let crc2 = canvas.getContext("2d");
 crc2.fillStyle = "black";
 crc2.fillRect(0, 0, crc2.canvas.width, crc2.canvas.height);
-for (let h = 0; h < 20; h++) {
+for (let h = 0; h < 40; h++) {
     /*
     let rdmPosX: number = (Math.random()+1)*MWposX[h];
     let rdmPosY: number = (Math.random()+1)*MWposY[h];
@@ -113,7 +113,7 @@ for (let h = 0; h < 20; h++) {
     */
     crc2.beginPath();
     crc2.ellipse(rdmPosX, rdmPosY, rdmRadX, rdmRadY, 0, 0, 6);
-    crc2.fillStyle = "#0d0d0d";
+    crc2.fillStyle = "#1e1e1e";
     crc2.fill();
     crc2.closePath();
 }
@@ -150,3 +150,26 @@ for (let i = 0; i < 20; i++) {
     crc2.fill();
     crc2.closePath();
 }
+/*
+
+crc2.beginPath();
+    crc2.ellipse(600, 300, 10, 10, 0, 0, 6);
+    crc2.closePath();
+    crc2.fillStyle = "white";
+    crc2.fill();
+
+for(let d: number = 0; d < 20; d++) {
+    let rdmPosX: number = Math.random()*canvas.width;
+    let rdmPosY: number = Math.random()*canvas.height;
+    let rdmRadius: number = Math.random()*Star2.radius;
+
+    crc2.beginPath();
+    crc2.ellipse(600, 300, 10, 10, 0, 0, 6);
+    crc2.closePath();
+    crc2.fillStyle = "white";
+    crc2.fill();
+    //crc2.translate(50, 50);
+    //crc2.resetTransform();
+    crc2.rotate(5 * Math.PI / 180);
+}
+*/ 

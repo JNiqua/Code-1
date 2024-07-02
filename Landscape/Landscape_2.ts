@@ -25,6 +25,24 @@ let Star2: StarData = {
     HaloOuterRadius: 0,
 }
 
+let Star3: StarData = {
+    color: "brown",
+    radius: 10,
+    Halo: true,
+    HaloColor: "black",
+    HaloInnerRadius: 13,
+    HaloOuterRadius: 23,
+}
+
+let Star4: StarData = {
+    color: "indianred",
+    radius: 14,
+    Halo: true,
+    HaloColor: "black",
+    HaloInnerRadius: 18,
+    HaloOuterRadius: 28,
+}
+
 interface MilkyWayData {
     posX: number,
     posY: number,
@@ -158,7 +176,7 @@ for(let i: number = 0; i < 20; i++) {
     let rdmPosY: number = Math.random()*canvas.height;
     let rdmRadius: number = Math.random();
     
-    let HaloGradient: CanvasGradient = crc2.createRadialGradient(rdmPosX, rdmPosY, Star1.radius*0.5, rdmPosX, rdmPosY, Star1.HaloOuterRadius*2);
+    let HaloGradient: CanvasGradient = crc2.createRadialGradient(rdmPosX, rdmPosY, Star(i).radius*0.5, rdmPosX, rdmPosY, Star1.HaloOuterRadius*2);
     HaloGradient.addColorStop(0, Star1.color);
     HaloGradient.addColorStop(1, Star1.HaloColor);
     
