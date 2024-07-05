@@ -9,6 +9,10 @@ function drawBackground() {
 drawBackground();
 let imgData: ImageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 */
+let ScoreCount = 0;
+let Score = document.createElement("div");
+document.body.appendChild(Score);
+Score.textContent = ScoreCount;
 function hndClick(_event) {
     let x = _event.offsetX;
     let y = _event.offsetY;
@@ -19,6 +23,8 @@ function hndClick(_event) {
             /*let newBirds: Bird[] = createBirds(1);
             let bird: Bird = newBirds[0];*/
             birds.push(bird);
+            ScoreCount++;
+            console.log(ScoreCount);
         }
     }
 }

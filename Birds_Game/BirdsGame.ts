@@ -18,6 +18,10 @@ drawBackground();
 let imgData: ImageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 */
 
+let ScoreCount: number = 0;
+let Score: HTMLDivElement = document.createElement("div");
+document.body.appendChild(Score);
+Score.textContent = ScoreCount;
 
 function hndClick(_event: MouseEvent): void {
     let x: number = _event.offsetX;
@@ -29,7 +33,10 @@ function hndClick(_event: MouseEvent): void {
             let bird: Bird = createBirds(1)[0];
             /*let newBirds: Bird[] = createBirds(1);
             let bird: Bird = newBirds[0];*/
-            birds.push(bird)
+            birds.push(bird);
+
+            ScoreCount++;
+            console.log(ScoreCount);
         }
 
     }

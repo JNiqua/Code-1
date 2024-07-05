@@ -38,9 +38,9 @@ do {
     //console.log(i);
 
     let newSpan: HTMLSpanElement = document.createElement("span")!;
-    newSpan.textContent = YEETText[Math.floor(Math.random()*5)];
     document.body.appendChild(newSpan);
-
+    
+    newSpan.textContent = YEETText[Math.floor(Math.random()*5)];
     newSpan.style.color = YEETColor[Math.floor(Math.random()*7)];
     newSpan.style.backgroundColor = YEETColor[Math.floor(Math.random()*7)];
     newSpan.style.fontSize = Math.random() * 50 + "pt";

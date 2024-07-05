@@ -15,8 +15,8 @@ let YEETColor = [
     "pink",
     "orange",
 ];
-let spanElement = document.querySelector("title#yeetTitle");
-spanElement.textContent = YEETText[Math.floor(Math.random() * 5)];
+let titleElement = document.querySelector("title#yeetTitle");
+titleElement.textContent = YEETText[Math.floor(Math.random() * 5)];
 function hndClick(_event) {
     let target = _event.target;
     target.textContent = YEETText[Math.floor(Math.random() * 5)];
@@ -30,8 +30,8 @@ do {
     i++;
     //console.log(i);
     let newSpan = document.createElement("span");
-    newSpan.textContent = YEETText[Math.floor(Math.random() * 5)];
     document.body.appendChild(newSpan);
+    newSpan.textContent = YEETText[Math.floor(Math.random() * 5)];
     newSpan.style.color = YEETColor[Math.floor(Math.random() * 7)];
     newSpan.style.backgroundColor = YEETColor[Math.floor(Math.random() * 7)];
     newSpan.style.fontSize = Math.random() * 50 + "pt";
